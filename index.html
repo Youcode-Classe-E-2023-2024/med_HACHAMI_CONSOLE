@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="home-landing">
+        <video autoplay loop muted  class="back-video">
+            <source src="./assets/Gen-2 3861165117, give m mockup for my, backgroundjpg, M 5.mp4" type="video/mp4">
+        </video>
+        <div class="home-content">
+            <div class="waviy">
+                <span style="--i:1">Step into</span>
+                <span style="--i:2">A World of</span>
+                <span style="--i:3">Nostalgia</span>
+            </div>
+            <p>
+                Lorem Ipsum est un texte d'espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale
+                 pour prévisualiser les mises en page et les maquettes visuelles.
+            </p>
+            <a href="#" class="shop-btn">SHOP NOW</a>
+        </div>
+        
+    </div>
+    <script src="./Components/navBar.js"></script>
+</body>
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        var menuIcon = document.getElementById("menu-icon"); 
+
+        if (sidebar.style.display === "list-item") {
+            sidebar.style.display = "none";
+            menuIcon.src = "./assets/menu-regular-24.png";
+        } else {
+            sidebar.style.display = "list-item"; 
+            menuIcon.src = "./assets/x-regular-24.png";
+        }
+    }
+
+</script>
+</html>
