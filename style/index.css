@@ -48,7 +48,7 @@
     left: 30px;
     height: 12vh;
     width: 95%;
-    
+    z-index: 100;
 }
 
 .logo{
