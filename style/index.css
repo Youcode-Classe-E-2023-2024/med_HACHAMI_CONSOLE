@@ -449,6 +449,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 56vh;
+
 }
 .sponosors-title{
     margin-top: 20px;
@@ -483,4 +485,135 @@
 
 .sponsor-thumb img{
     border-radius: 5px;
+}
+
+/* footer */
+
+.footer{
+    border: 1px solid #070320;
+    background: #070320;
+    color: #fff;
+    
+}
+
+.footer-container{
+    
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-col{
+    
+    width: 30%;
+    
+}
+.col-1 img{
+    width: 100px;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.col-1 p{
+    font-family: VT323;
+    margin-bottom: 24px;
+}
+.col-1 span{
+    font-family: VT323;
+    margin-bottom: 20px;
+}
+
+.col-2{
+    padding-top: 30px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.col-2 h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.col-2 ul{
+    margin-top: 10px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.footer-item{
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    
+}
+.footer-item img{
+    width: 25px;
+    height: 25px;
+}
+.footer-link{
+    color: #fff;
+    text-decoration: none;
+    font-family: VT323;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+.footer-link:hover{
+    padding-left: 8px;
+}
+
+.col-3{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+    
+}
+
+.col-3 h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.col-3 p{
+    font-family: VT323;
+    font-size: 20px;
+}
+
+.footer-bot{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 60%;
+    height: 75px;
+}
+.social-icons{
+    
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-bot p{
+    font-family:sans-serif;
+    text-align: center;
+    font-size: 12px;
 }
