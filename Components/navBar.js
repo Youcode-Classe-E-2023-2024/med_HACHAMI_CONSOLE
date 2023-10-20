@@ -7,7 +7,7 @@ function generateNavbar() {
             <ul class="nav-ietms">
                 <li class="nav-item"><a href="./" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="./how-it-work.html" class="nav-link">How It Work</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="./store.html" class="nav-link">Store</a></li>
                 
             </ul>
         </div>
