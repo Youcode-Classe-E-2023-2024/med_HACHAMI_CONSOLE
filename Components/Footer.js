@@ -11,8 +11,8 @@ function generateFooter() {
                 <h3>Active-links</h3>
                 <ul>
                     <li class="footer-item"><img src="./assets/link-icon.png" alt="" ><a href="/" class="footer-link">Home</a></li>
-                    <li class="footer-item"><img src="./assets/link-icon.png" alt="" ><a href="/" class="footer-link">How It Work</a></li>
-                    <li class="footer-item"><img src="./assets/link-icon.png" alt="" ><a href="/" class="footer-link">Store</a></li>
+                    <li class="footer-item"><img src="./assets/link-icon.png" alt="" ><a href="./how-it-work.html" class="footer-link">How It Work</a></li>
+                    <li class="footer-item"><img src="./assets/link-icon.png" alt="" ><a href="./store.php" class="footer-link">Store</a></li>
                 </ul>
             </div>
             <div class="footer-col col-3">
