@@ -43,7 +43,7 @@
                 </div>
                 <p><?php echo $product['description1'] ?></p>
                 <div class="storeCard-footer">
-                    <a href="">Buy Now</a>
+                    <a href="./product-details.php?product_code=<?php echo $product['product_code']  ?>">Buy Now</a>
                     <span>$ <?php echo $product['price'] ?></span>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 </div>
                 <p><?php echo $product['description1'] ?></p>
                 <div class="storeCard-footer">
-                    <a href="">Buy Now</a>
+                    <a href="./product-details.php?product_code=<?php echo $product['product_code']  ?>">Buy Now</a>
                     <span>$ <?php echo $product['price'] ?></span>
                 </div>
             </div>
