@@ -9,5 +9,12 @@ class ProductCont extends Product{
         // require 'Home.php';
     }
 
+    public function displayProductById($productCode){
+        $product = $this->getProductById($productCode);
+        return $product;
+
+    }
+
+    
     
 }
