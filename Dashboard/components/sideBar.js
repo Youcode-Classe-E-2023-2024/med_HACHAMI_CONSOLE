@@ -9,11 +9,11 @@ function generateSideBar() {
             </li>
             <li class="sideBar-item">
                 <img src="./assets/icons-game.png" class="item-icon" >
-                <a href="#" class="sideBar-link">Games</a>
+                <a href="./Games.php" class="sideBar-link">Games</a>
             </li>
             <li class="sideBar-item">
                 <img src="./assets/icons-magazine.png" class="item-icon" >
-                <a href="#" class="sideBar-link">Magazine</a>
+                <a href="./Magazine.php" class="sideBar-link">Magazine</a>
             </li>
         </ul>
     </div>
