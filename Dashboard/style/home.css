@@ -121,3 +121,15 @@
 .header__item {
 	text-transform:uppercase;
 }
+.actions{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.action-icon{
+    width: 20px;
+    height: 20px;
+}
