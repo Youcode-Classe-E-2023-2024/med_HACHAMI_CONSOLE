@@ -17,27 +17,8 @@ if (!isset($_SESSION["user_id"])) {
     
 </head>
 <body>
-<nav class="navbar">
-    <a href="#"><img src="./assets/Console_logo-footer.png" alt="" srcset="" class="logo"></a>
-    <a href="includes/logout.inc.php"><img src="./assets/log-out.png" alt="" srcset="" class="log-out"></a>
-</nav>
-<div class="side-bar">
-    <p class="">Navigation</p>
-    <ul class="sideBar-items">
-        <li class="sideBar-item">
-            <img src="./assets/icon-home.png" class="item-icon" >
-            <a href="#" class="sideBar-link">Home</a>
-        </li>
-        <li class="sideBar-item">
-            <img src="./assets/icons-game.png" class="item-icon" >
-            <a href="#" class="sideBar-link">Games</a>
-        </li>
-        <li class="sideBar-item">
-            <img src="./assets/icons-magazine.png" class="item-icon" >
-            <a href="#" class="sideBar-link">Magazine</a>
-        </li>
-    </ul>
-</div>
+<div id="navbar"></div>
+<div id="sidebar"></div>
 
 <div class="container ">
     <div class="table">
@@ -49,6 +30,7 @@ if (!isset($_SESSION["user_id"])) {
 			<div class="header__item"><p>Product code</p></div>
 			<div class="header__item"><p>Stock quantity</p></div>
             <div class="header__item"><p>Reviews</p></div>
+            <div class="header__item"><p>Actions</p></div>
             
 		</div>
         <div class="table-content">	
@@ -67,8 +49,12 @@ if (!isset($_SESSION["user_id"])) {
                 <div class="table-data"><?php echo $product['typeOfProduct']; ?></div>
                 <div class="table-data"><?php echo $product['price']; ?></div>
                 <div class="table-data"><?php echo $product['product_code']; ?></div>
-                <div class="table-data"><?php echo $product['product_code']; ?></div>
+                <div class="table-data"><?php echo $product['stock_quantity']; ?></div>
                 <div class="table-data"><?php echo $product['reviews']; ?></div>
+                <div class="table-data actions">
+                    <a href="edit.php?product_code=<?php echo $product['product_code'];?>"  ><img src="./assets/edit-icon.png" class="action-icon"></a>
+                    <a href="delete.php?product_code=<?php echo $product['product_code']; ?>"  ><img src="./assets/icon-delete.png" class="action-icon"></a>
+                </div>
            
             </div>
             <?php } ?>
@@ -78,7 +64,8 @@ if (!isset($_SESSION["user_id"])) {
         
     </table>
                 
-    
+    <script src="./Components/navbar.js"></script>
+    <script src="./Components/sideBar.js"></script>
 </div>
 </body>
 </html>
