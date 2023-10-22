@@ -6,7 +6,17 @@ class ProductCont extends Product{
         $products = $this->getAllProducts();
         return $products;
 
-        // require 'Home.php';
+        
+    }
+
+    public function displayGames(){
+        $games = $this->getAllGames();
+        return $games;
+    }
+
+    public function displayMagazine(){
+        $movies = $this->getAllMagazines();
+        return $movies;
     }
 
     public function displayProductById($productCode){
