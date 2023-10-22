@@ -82,4 +82,81 @@ class Product extends Dbh{
                 exit();
             }
         }
+
+        public function deleteProduct($product_code){
+            try {
+                $sql = "DELETE FROM  products  WHERE product_code = :product_code ;" ;
+                
+                
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->bindParam(':product_code', $product_code, PDO::PARAM_STR);
+                
+                
+                if ($stmt->execute()) {
+                    header("Location: ../home.php?succes=deleted");
+                    exit();
+                } else {
+                    header("Location: ../edit.php?error=database_error");
+                    exit();
+                }
+             
+            } catch (PDOException $e) {
+                
+                header("Location: ../edit.php?error=database_error");
+                exit();
+            }
+        }
+
+        public function getAllGames(){
+            
+            try {
+                $type = "games";
+                $sql = "SELECT * FROM products WHERE typeOfProduct = :typeOfProduct;";
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->bindParam(':typeOfProduct', $type, PDO::PARAM_STR);
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+                if (empty($result)) {
+                    echo "no_datatodisplay";
+                    exit();
+                }
+                
+                return $result;
+    
+                
+            } catch (PDOException $e) {
+                
+                echo 'Error: ' . $e->getMessage();
+                // header("Location: ../edit.php?error=database_error");
+                // exit();
+            }
+
+
+        }
+
+        public function getAllMagazines(){
+            try {
+                $type = "magazine";
+                $sql = "SELECT * FROM products WHERE typeOfProduct = :typeOfProduct;";
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->bindParam(':typeOfProduct', $type, PDO::PARAM_STR);
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+                if (empty($result)) {
+                    echo "no_datatodisplay";
+                    exit();
+                }
+                
+                return $result;
+    
+                
+            } catch (PDOException $e) {
+                
+                echo 'Error: ' . $e->getMessage();
+                // header("Location: ../edit.php?error=database_error");
+                // exit();
+            }
+        }
 }
