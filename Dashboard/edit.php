@@ -32,7 +32,7 @@ if (!isset($_SESSION["user_id"])) {
 
     ?>
         <form action="includes/edit.inc.php" method="POST" class="form">
-            <?php echo $product_code; ?>
+            
             <input type="text" placeholder="title" name="title" value="<?php echo $product[0]['title'] ?> " >
             <input type="text" placeholder="description" name="description" value="<?php echo $product[0]['description1'] ?> ">
             <input type="text" placeholder="price" name="price" value="<?php echo $product[0]['price'] ?> ">
