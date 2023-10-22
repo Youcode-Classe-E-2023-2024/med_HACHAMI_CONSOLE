@@ -10,7 +10,7 @@ if(isset($_POST['submit']))
     $product_code = $_POST['product_code'];
     include "../classes/dbh.classes.php";
     include "../classes/product.classes.php";
-    include "../classes/productEdit.contr.php";
+    
    
     $product = new Product();
     $product->editeProduct($title,$description,$price, $stock_quantity,$reviews,$product_code);
