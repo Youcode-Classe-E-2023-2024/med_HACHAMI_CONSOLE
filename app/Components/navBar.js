@@ -28,9 +28,12 @@ function toggleSidebar() {
 
     if (sidebar.style.display === "list-item") {
         sidebar.style.display = "none";
-        menuIcon.src = "../assets/menu-regular-24.png";
+        menuIcon.src = "./assets/menu-regular-24.png";
+        console.log("./assets/menu-regular-24.png");
     } else {
         sidebar.style.display = "list-item"; 
-        menuIcon.src = "../assets/x-regular-24.png";
+        menuIcon.src = "./assets/x-regular-24.png";
+        console.log("./assets/x-regular-24.png");
     }
+   
 }
