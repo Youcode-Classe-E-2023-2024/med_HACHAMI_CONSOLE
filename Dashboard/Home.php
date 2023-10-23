@@ -23,6 +23,9 @@ if (!isset($_SESSION["user_id"])) {
 <div id="sidebar"></div>
 
 <div class="container ">
+    <div class="add">
+        <a href="./addNewProduct.php"><img src="./assets/add-icon.png" alt="" width="35px"></a>
+    </div>
     <div class="table">
         <div class="table-header">
 			<div class="header__item"><p>ID</p></div>
