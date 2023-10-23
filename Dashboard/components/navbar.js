@@ -1,8 +1,8 @@
 function generateNavbar() {
     return `
     <nav class="navbar">
-        <a href="#"><img src="./assets/Console_logo-footer.png" alt="" srcset="" class="logo"></a>
-        <a href="includes/logout.inc.php"><img src="./assets/log-out.png" alt="" srcset="" class="log-out"></a>
+        <a href="./Home.php"><img src="./assets/Console_logo-footer.png" alt="" srcset="" class="logo"></a>
+        <img src="./assets/user-icon.png" alt="" srcset="" class="log-out">
     </nav>
     `;
 }
