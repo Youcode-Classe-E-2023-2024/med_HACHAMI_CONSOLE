@@ -16,6 +16,10 @@ function generateSideBar() {
                 <a href="./Magazine.php" class="sideBar-link">Magazine</a>
             </li>
         </ul>
+        <div class="logout">
+            <img src="./assets/log-out.png" class="item-icon" >
+            <a href="includes/logout.inc.php" class="sideBar-link">Log out</a>
+        </div>
     </div>
     `;
 }
