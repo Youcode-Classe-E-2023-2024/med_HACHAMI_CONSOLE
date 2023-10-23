@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.form-container{
+    /* border: 1px solid red; */
+    height: 80vh;
+    width: 40%;
+    position: relative;
+    right: 10%;
+    top: 5%;
+  
+
+}
+.form{
+   
+    border: 1px solid #fff;
+    border-radius: 10px;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+
+.row{
+   
+    width: 60%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.row1 input , .row1 select {
+   
+    height: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.row2{
+    display: flex;
+    gap: 10px;
+}
+.row2 input  {
+    
+    height: 100%;
+    width: 40%;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.row3 input{
+    height: 100%;
+    width: 40%;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+input[type="file"] {
+    display: none;
+}
+
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff; 
+    color: #000; 
+    cursor: pointer;
+    
+    border-radius: 5px;
+}
+
+textarea {
+    width: 55%;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 12px;
+}
+
+button {
+    width: 85px;
+    height: 45px;
+    color: #fff;
+    background-color: #2e1f2f;
+    border-radius: 10px;
+}
