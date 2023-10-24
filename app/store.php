@@ -105,8 +105,8 @@ session_start();
     <div id="footer"></div>
     <script src="./Components/Footer.js"></script>
     <script src="./Components/navBar.js"></script>
-    <script src="./Components/addFavorite.js"></script>
-    <script src="./Components/deleteFavorite.js"></script>
+    <script src="./API/addFavorite.js"></script>
+    <script src="./API/deleteFavorite.js"></script>
     <script>
         
     </script>
