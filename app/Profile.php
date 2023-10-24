@@ -14,13 +14,18 @@
 session_start();
 if (isset($_SESSION["user_id"])) {
 ?>
+
   <div class="profile">
         
         <div class="card">
             <img src="./assets/dragonBull.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">MedHachami</h5>
+                <h5 class="card-title"><?php echo $_SESSION['user_fullname']; ?></h5>
                 
+            </div>
+            <div class="logout">
+              
+              <a href="includes/logout.inc.php" class="sideBar-link"><img src="./assets/log-out.png" class="item-icon" style="width: 100%;height:100%" alt="Log-Out" ></a>
             </div>
         </div>
             
@@ -52,19 +57,19 @@ if (isset($_SESSION["user_id"])) {
 
  <div class="content"> 
 
-  <h2>Sign In</h2> 
+  <h2>Log in</h2> 
 
-  <div class="form"> 
+  <form class="form" action="includes/login.inc.php" method="POST" > 
 
    <div class="inputBox"> 
 
-    <input type="text" required> <i>Username</i> 
+    <input type="text" name="email" required> <i>Email</i> 
 
    </div> 
 
    <div class="inputBox"> 
 
-    <input type="password" required> <i>Password</i> 
+    <input type="password" name="pwd" required> <i>Password</i> 
 
    </div> 
 
@@ -74,11 +79,11 @@ if (isset($_SESSION["user_id"])) {
 
    <div class="inputBox"> 
 
-    <button class="login-btn">Register</button>
+    <button class="login-btn" name="submit" type="submit" >Log in</button>
 
    </div> 
 
-  </div> 
+  </form> 
 
  </div> 
 
