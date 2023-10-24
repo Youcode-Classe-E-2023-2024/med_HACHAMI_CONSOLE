@@ -3,7 +3,7 @@
 *{
     padding: 0;
     margin: 0;
-   
+    /* border: 1px solid red; */
 }
 
 .profile{
@@ -52,7 +52,7 @@
   .card-title {
     font-weight: bold;
     font-family: VT323;
-    font-size: 35px;
+    font-size: 28px;
     text-align: center;
     color: #fff;
   }
@@ -60,7 +60,11 @@
     color: #fff;
     
   }
-
+.logout{
+  
+  height: 25px;
+  width: 35px;
+}
   .collapse-container{
     border-left:2px solid #000 ;
     height: 95%;
