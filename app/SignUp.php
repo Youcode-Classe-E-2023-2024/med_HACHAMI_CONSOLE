@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION["user_id"])) {
+    header("Location: Profile.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +53,7 @@
 
    </div> 
 
-   <div class="links"> <a href="#">Already Have an account ?</a> <a href="#">Login</a> 
+   <div class="links"> <a href="#">Already Have an account ?</a> <a href="./Profile.php">Login</a> 
 
    </div> 
 
