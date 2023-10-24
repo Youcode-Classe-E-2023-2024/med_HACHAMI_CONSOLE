@@ -1,8 +1,6 @@
+
 <?php
-    
-
-
-    
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -44,7 +42,23 @@
                 <p><?php echo $product['description1'] ?></p>
                 <div class="storeCard-footer">
                     <a href="./product-details.php?product_code=<?php echo $product['product_code']  ?>">Buy Now</a>
-                    <span>$ <?php echo $product['price'] ?></span>
+                    <div class="footerRight">
+                    <?php
+                         
+                        
+                         include_once('./includes/isFavorite.php');
+                         if(isset($_SESSION["user_id"])){
+                             $productId = $product['id'];
+                             $userId = $_SESSION['user_id'];
+                             if(isFavorite($productId, $userId)){
+ 
+                          ?>
+                             <img src="./assets/white-heartLike.png" onclick="deleteFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
+                         <?php }else{ ?>
+                             <img src="./assets/white-heart.png " onclick="addFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
+                         <?php }} ?>
+                         <span>$ <?php echo $product['price'] ?></span>
+                    </div>
                 </div>
             </div>
             <?php }} else{?>
@@ -61,7 +75,24 @@
                 <p><?php echo $product['description1'] ?></p>
                 <div class="storeCard-footer">
                     <a href="./product-details.php?product_code=<?php echo $product['product_code']  ?>">Buy Now</a>
-                    <span>$ <?php echo $product['price'] ?></span>
+                   <div class="footerRight">
+                   <?php
+                         
+                        
+                        include_once('./includes/isFavorite.php');
+                        if(isset($_SESSION["user_id"])){
+                            $productId = $product['id'];
+                            $userId = $_SESSION['user_id'];
+                            if(isFavorite($productId, $userId)){
+
+                         ?>
+                            <img src="./assets/white-heartLike.png" onclick="deleteFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
+                        <?php }else{ ?>
+                            <img src="./assets/white-heart.png " onclick="addFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
+                        <?php }} ?>
+                        <span>$ <?php echo $product['price'] ?></span>
+                    </div>
+                    
                 </div>
             </div>
             <?php }}?>
@@ -74,5 +105,10 @@
     <div id="footer"></div>
     <script src="./Components/Footer.js"></script>
     <script src="./Components/navBar.js"></script>
+    <script src="./Components/addFavorite.js"></script>
+    <script src="./Components/deleteFavorite.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
