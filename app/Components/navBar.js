@@ -8,7 +8,7 @@ function generateNavbar() {
                 <li class="nav-item"><a href="./" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="./how-it-work.html" class="nav-link">How It Work</a></li>
                 <li class="nav-item"><a href="./store.php" class="nav-link">Store</a></li>
-                
+                <li class="nav-item"><a href="./Profile.php" class="nav-link">Profile</a></li>
             </ul>
         </div>
     </nav>
