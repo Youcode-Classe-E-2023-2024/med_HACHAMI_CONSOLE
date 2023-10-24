@@ -25,7 +25,7 @@ if (isset($_SESSION["user_id"])) {
             </div>
             <div class="logout">
               
-              <a href="includes/logout.inc.php" class="sideBar-link"><img src="./assets/log-out.png" class="item-icon" style="width: 100%;height:100%" alt="Log-Out" ></a>
+              <a href="includes/log-out.php" class="sideBar-link"><img src="./assets/log-out.png" class="item-icon" style="width: 100%;height:100%" alt="Log-Out" ></a>
             </div>
         </div>
             
