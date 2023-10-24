@@ -11,8 +11,10 @@
 <body>
     <div id="navbar"></div>
 <?php
-session_start();
-if (isset($_SESSION["user_id"])) {
+include_once('./includes/isLogged.php');
+if(isLoggedIn()){
+
+
 ?>
 
   <div class="profile">
