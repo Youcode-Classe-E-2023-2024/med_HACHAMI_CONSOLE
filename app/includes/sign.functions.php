@@ -13,7 +13,8 @@ function emptyInput($email,$fullname , $pwdrepeat , $pwd) {
 }
 function validUid($fullname){
     $result ='';
-    if(!preg_match('/^[a-zA-Z0-9_]+$/',$fullname)){
+    $pattern = "/^[A-Za-z ]+$/";
+    if(!preg_match($pattern,$fullname)){
     $result = false;
     }else{
     $result = true;
