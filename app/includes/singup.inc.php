@@ -45,7 +45,7 @@ if(isset($_POST["submit"])){
 
     $res = signUpUser($link,$fullname, $email, $phone,$pwd , $pwdrepeat);
     if($res === true){
-        header("location:../SignUp.php?signup=success");
+        header("location:../Profile.php?signup=success");
         exit();
     }else{
         header("location:../SignUp.php?signup=failed");
