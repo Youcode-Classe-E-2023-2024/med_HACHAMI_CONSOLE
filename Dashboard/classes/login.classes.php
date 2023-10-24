@@ -3,7 +3,7 @@
 class Login extends Dbh{
 
     protected function getUser($uid, $pwd ){
-        $sql = "SELECT * FROM users WHERE uid = ? "; 
+        $sql = "SELECT * FROM admin_users WHERE uid = ? "; 
         $stmt = $this->connect()->prepare($sql);
         
         if(!$stmt->execute(array($uid))){
@@ -26,7 +26,7 @@ class Login extends Dbh{
             header("Location:../index.php?error=wrongpassword");  
             exit();
         }else if($checkPwd == true){
-            $sql = "SELECT * FROM users WHERE uid = ? OR email = ? AND pwd = ? ;";
+            $sql = "SELECT * FROM admin_users WHERE uid = ? OR email = ? AND pwd = ? ;";
             $stmt = $this->connect()->prepare($sql);
             
             if(!$stmt->execute(array($uid,$uid ,$pwd))){

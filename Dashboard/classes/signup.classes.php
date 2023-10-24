@@ -3,7 +3,7 @@
 class SignUp extends Dbh{
 
     protected function setUser($uid, $pwd , $email){
-        $sql = "INSERT INTO users (uid , pwd , email) VALUES (? , ? , ?);"; 
+        $sql = "INSERT INTO admin_users (uid , pwd , email) VALUES (? , ? , ?);"; 
         $stmt = $this->connect()->prepare($sql);
         $hashedPwd = password_hash($pwd,PASSWORD_DEFAULT);
         if(!$stmt->execute(array($uid,$hashedPwd ,$email))){
@@ -21,7 +21,7 @@ class SignUp extends Dbh{
         return $resultCheck;
     }
     protected function checkUser($uid,$email){
-        $sql = "SELECT * FROM users WHERE uid = ? OR email = ?;"; 
+        $sql = "SELECT * FROM admin_users WHERE uid = ? OR email = ?;"; 
         $stmt = $this->connect()->prepare($sql);
         if(!$stmt->execute(array($uid,$email))) {
             $stmt = null;//delete the statement
