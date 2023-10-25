@@ -420,8 +420,8 @@
     font-family: VT323;
     font-size: 18px;
     text-align: center;
-    padding: 4px;
-    width: 45px;
+    padding: 7px;
+    width: auto;
     height: 5vh;
     border-radius: 2px;
     border: 2px dashed #fff;
