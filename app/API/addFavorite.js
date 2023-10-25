@@ -1,22 +1,23 @@
-
-
-
-function addFavorite(productId,userId){
-    console.log(productId,userId);
-    fetch('./includes/addFavorite.php', {
-        method: 'POST',
-        headers: {
+function addFavorite(productId, userId) {
+  var imgIcon = document.getElementById("WhiteH");
+  console.log(imgIcon);
+  fetch('./includes/addFavorite.php', {
+      method: 'POST',
+      headers: {
           'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ productId: productId, userId: userId }),
-      })
-        .then(response => response.json())
-        .then(data => {
-          // Handle the response, e.g., show a success message
-          console.log(data.message);
+      },
+      body: JSON.stringify({ productId: productId, userId: userId }),
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
           
-          // Reload the page to see the updated data
-        //   location.reload();
-        })
-        
+         
+          console.log(data.message);
+          location.reload();
+      } else {
+          console.log(data.error);
+      }
+  })
+  
 }
