@@ -18,7 +18,7 @@ if(isLoggedIn()){
 ?>
 
   <div class="profile">
-        
+      <div class="profile-container">
         <div class="card">
             <img src="./assets/dragonBull.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -30,8 +30,6 @@ if(isLoggedIn()){
               <a href="includes/log-out.php" class="sideBar-link"><img src="./assets/log-out.png" class="item-icon" style="width: 100%;height:100%" alt="Log-Out" ></a>
             </div>
         </div>
-            
-       
         <div class="collapse-container">
             <div class="collapse-btn">
                 <button class="collapsible" id="button1">Profile Details</button>
@@ -39,7 +37,20 @@ if(isLoggedIn()){
             </div>
             <div class="collapse-body">
                 <div class="content" id="section1">
-                    <p>This is Section 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum velit quos consequatur in architecto sunt officiis debitis sapiente iste omnis dolor libero et assumenda quidem, quam exercitationem nam quae! Delectus.</p>
+                    <ul class="user-deatils">
+                      <li>
+                        <img src="./assets/icon-user.png" alt="">
+                         <p><?php echo $_SESSION['user_fullname']; ?></p>
+                        </li>
+                      <li>
+                        <img src="./assets/icon-email.png" alt="">
+                         <p><?php echo $_SESSION['email']; ?></p>
+                        </li>
+                      <li>
+                        <img src="./assets/icon-phone.png" alt="">
+                         <p><?php echo $_SESSION['phone']; ?></p>
+                        </li>
+                    </ul>
                   </div>
                   
                   
@@ -48,7 +59,12 @@ if(isLoggedIn()){
                   </div>
             </div>
         </div>
-    </div> 
+      </div>  
+        
+            
+       
+        
+  </div> 
 <?php
   } else {
 ?>
