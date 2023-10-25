@@ -96,19 +96,6 @@ function checkUser($link,$fullname, $email) {
 }
 
 
-
-
-
-
-
-
-    
-    
-    
-    
-
-
-
 function setUser($link,$fullname, $phone, $pwd, $email) {
     
     
