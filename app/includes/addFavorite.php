@@ -13,10 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt) {
         $stmt->bind_param("ii", $productId, $userId);
         if ($stmt->execute()) {
-            $response = ["message" => "Favorite added successfully"];
+            $response = ["success" => true, "message" => "Favorite added successfully"];
             echo json_encode($response);
         } else {
-            $response = ["error" => "Failed to add favorite"];
+            $response = ["failed" => false,"error" => "Failed to add favorite"];
             echo json_encode($response);
         }
         $stmt->close();
