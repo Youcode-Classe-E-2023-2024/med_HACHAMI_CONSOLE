@@ -80,6 +80,8 @@ function loginUser($email, $pwdInput){
     
         $_SESSION['user_id'] = $user_id;
         $_SESSION['user_fullname'] = $user_fullname;
+        $_SESSION['email'] = $user_email;
+        $_SESSION['phone'] = $user_phone;
 
         
     }
