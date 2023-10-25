@@ -86,9 +86,9 @@ session_start();
                             if(isFavorite($productId, $userId)){
 
                          ?>
-                            <img src="./assets/white-heartLike.png" onclick="deleteFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
+                            <img src="./assets/white-heartLike.png" id="whiteHLike" onclick="deleteFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
                         <?php }else{ ?>
-                            <img src="./assets/white-heart.png " onclick="addFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
+                            <img src="./assets/white-heart.png " id="WhiteH" onclick="addFavorite(<?php echo $productId ; ?>,<?php echo $userId ?>)" alt="" srcset="" style="width: 35px; height: 35px;">
                         <?php }} ?>
                         <span>$ <?php echo $product['price'] ?></span>
                     </div>
