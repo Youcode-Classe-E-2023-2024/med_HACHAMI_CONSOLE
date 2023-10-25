@@ -125,6 +125,7 @@
     align-items: center; */
     height: 50vh;
     
+    
   }
   .content {
     display: none;
@@ -139,6 +140,10 @@
     border-radius: 10px;
     width: 50%;
     height: 90%;
+  }
+  #section2{
+    
+    overflow-y: scroll;
   }
   .user-deatils{
     
