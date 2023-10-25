@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($stmt->execute()) {
            
-            $response = ["message" => "Favorite deleted successfully"];
+            $response = ["success" => true, "message" => "Favorite deleted successfully"];
             echo json_encode($response);
         } else {
-            $response = ["error" => "Favorite not deleted"];
+            $response = ["failed" => false,"error" => "Favorite not deleted"];
             echo json_encode($response);
         }
         
