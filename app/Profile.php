@@ -55,7 +55,29 @@ if(isLoggedIn()){
                   
                   
                   <div class="content" id="section2">
-                    <p>This is Section 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. In non deleniti expedita reiciendis rem quasi aspernatur vero, dolorum, sint exercitationem repellat, soluta quisquam? Mollitia maxime hic repellendus, eius odio officia?.</p>
+                    
+                    <div class="games-container">
+                    <?php
+                    include_once('./includes/LikedProducts.php');
+                    $products = likedProduct($_SESSION['user_id']);
+                    foreach($products as $product){
+                    ?>
+                      <div class="game-card">
+                          <div class="card-thumb">
+                              <img src="./assets/<?php echo $product['imgUrl'] ?>" alt="">
+                          </div>
+                          <div class="card-description">
+                              <h2><?php echo $product['title'] ?></h2>
+                              <div class="card-footer">
+                                  
+                                  <span><?php echo $product['price'] ?>$</span>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <?php }?>    
+                  </div>
+                  
                   </div>
             </div>
         </div>
