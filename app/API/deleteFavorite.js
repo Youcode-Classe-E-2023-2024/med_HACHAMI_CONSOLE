@@ -1,6 +1,6 @@
 
 function deleteFavorite(productId,userId) {
-
+    var imgIcon = document.getElementById("WhiteH");
     fetch('./includes/deleteFavorite.php',{
         method: 'POST',
         headers: {
@@ -10,10 +10,17 @@ function deleteFavorite(productId,userId) {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data.message);
-      
-   
-      location.reload();
+        if (data.success) {
+          
+            
+            console.log(data.message);
+            location.reload();
+        } else {
+            console.log(data.error);
+        }
+        
+            
+      console.log(data.message);  
     })
 
 
